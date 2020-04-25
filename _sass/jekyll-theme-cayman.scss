@@ -109,7 +109,7 @@ a {
   color: $header-heading-color;
   text-align: center;
   background-color: $header-bg-color;
-  background-image: url(https://g.udn.com.tw/upfiles/B_AN/andy840119/PSN_PHOTO/658/f_11071658_1.jpg);
+  background-image: url('../img/header.jpg');
 
   @include small {
     padding: 2rem 1rem;
