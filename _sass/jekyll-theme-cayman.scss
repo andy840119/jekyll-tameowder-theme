@@ -111,6 +111,13 @@ a {
   text-align: center;
   background-color: $header-bg-color;
   background-image: url('../img/header.jpg');
+  position: relative;
+  height: 180px;
+  margin: auto;
+
+  @include large {
+    max-width: 80rem;
+  }
 
   @include small {
     padding: 2rem 1rem;
