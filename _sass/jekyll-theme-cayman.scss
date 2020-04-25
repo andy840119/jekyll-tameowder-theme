@@ -32,6 +32,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: $body-text-color;
+  background-image: url('../img/background.png');
 }
 
 #skip-to-content {
@@ -107,9 +108,22 @@ a {
 
 .page-header {
   color: $header-heading-color;
-  text-align: center;
+  text-align: left;
   background-color: $header-bg-color;
-  background-image: url(https://g.udn.com.tw/upfiles/B_AN/andy840119/PSN_PHOTO/658/f_11071658_1.jpg);
+  background-image: url('../img/header.jpg');
+  // enable to adjust customize width and height
+  position: relative;
+  height: 180px;
+  // let header can in center
+  margin: auto;
+  // adjust inner font
+  padding-left: 15px;
+  padding-top: 80px;
+
+  @include large {
+    // in large view, max width is 80 rem
+    max-width: 80rem;
+  }
 
   @include small {
     padding: 2rem 1rem;
@@ -118,10 +132,10 @@ a {
 
 .project-name {
   margin-top: 0;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0;
 
   @include large {
-    font-size: 3.25rem;
+    font-size: 2.75rem;
   }
 
   @include medium {
@@ -137,29 +151,36 @@ a {
   margin-bottom: 2rem;
   font-weight: normal;
   opacity: 0.7;
+  //tagline should not have top and bottom margin
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 
   @include large {
-    font-size: 1.25rem;
+    font-size: 1.0rem;
   }
 
   @include medium {
-    font-size: 1.15rem;
+    font-size: 0.9rem;
   }
 
   @include small {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
 .main-content {
   word-wrap: break-word;
+  background-color: white;
+  border: 1px #ddd;
+  border-left-style: solid;
+  border-right-style: solid;
 
   :first-child {
     margin-top: 0;
   }
 
   @include large {
-    max-width: 64rem;
+    max-width: 78rem;
     padding: 2rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
