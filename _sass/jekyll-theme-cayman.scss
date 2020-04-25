@@ -175,6 +175,34 @@ a {
   border-left-style: solid;
   border-right-style: solid;
 
+  // navigation style
+  .sidenav {
+    visibility: hidden;
+
+    // only display navigation in large device
+    @include large {
+      visibility: visible;
+      height: 100%;
+      width: 16rem;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+  }
+
+  // article style
+  .main {
+
+    // only move the left position in large device
+    @include large {
+      // padding p rem from navigation
+      margin-left: 21rem;
+    }
+  }
+
   :first-child {
     margin-top: 0;
   }
@@ -182,6 +210,8 @@ a {
   @include large {
     max-width: 78rem;
     padding: 2rem 6rem;
+    // adding this because it looks weird when padding left is 6 rem
+    padding-left: 2rem;
     margin: 0 auto;
     font-size: 1.1rem;
   }
