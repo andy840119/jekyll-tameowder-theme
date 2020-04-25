@@ -3,3 +3,7 @@ description: Tameowder theme is modified from Cayman, a blog-like theme.
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-cayman
+
+# navigation
+facebook_url: https://www.facebook.com/OAQaa
+discord_id: 299006062323826688

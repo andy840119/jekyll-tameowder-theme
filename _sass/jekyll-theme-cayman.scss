@@ -175,6 +175,29 @@ a {
   border-left-style: solid;
   border-right-style: solid;
 
+  // navigation style
+  .sidenav {
+    display: none;
+
+    // only display navigation in large device
+    @include large {
+      display: inherit;
+      width: 16rem;
+      padding-top: 20px;
+      float: left;
+    }
+  }
+
+  // article style
+  .main {
+
+    // only move the left position in large device
+    @include large {
+      // padding p rem from navigation
+      margin-left: 21rem;
+    }
+  }
+
   :first-child {
     margin-top: 0;
   }
@@ -182,6 +205,8 @@ a {
   @include large {
     max-width: 78rem;
     padding: 2rem 6rem;
+    // adding this because it looks weird when padding left is 6 rem
+    padding-left: 2rem;
     margin: 0 auto;
     font-size: 1.1rem;
   }
