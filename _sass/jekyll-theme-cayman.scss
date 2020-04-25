@@ -177,19 +177,14 @@ a {
 
   // navigation style
   .sidenav {
-    visibility: hidden;
+    display: none;
 
     // only display navigation in large device
     @include large {
-      visibility: visible;
-      height: 100%;
+      display: inherit;
       width: 16rem;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #111;
-      overflow-x: hidden;
       padding-top: 20px;
+      float: left;
     }
   }
 
