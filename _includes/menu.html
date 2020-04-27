@@ -1,0 +1,17 @@
+{% if menu %}
+  <ul>
+    {% for item in menu %}
+      <li class="menu-item-{{ loop.index }}">
+        {% if page.url contains item.url %}
+          <a class="isDisabled">{{ item.title }}</a>
+        {% else if %}
+          <a href="{{ item.url }}" title="{{ item.title }}" >{{ item.title }}</a>
+        {% endif %}
+        {% if item.children %}
+          {% assign menu = item.children %}
+          {% include menu.html %}
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
