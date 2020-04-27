@@ -200,6 +200,11 @@ a {
 
   :first-child {
     margin-top: 0;
+
+    @include large {
+      // make row's size based on child(navigation and content)'s size
+      display: inline-block;
+    }
   }
 
   @include large {
